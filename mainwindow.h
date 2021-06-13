@@ -20,7 +20,12 @@ private slots:
 
     void on_lineEdit_textChanged(const QString &arg1);
 
+    void on_actionVersion_Info_triggered();
+
+    void on_actionGitHub_Page_triggered();
+
 private:
     Ui::MainWindow *ui;
 };
+
 #endif // MAINWINDOW_H

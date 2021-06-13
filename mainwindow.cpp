@@ -2,6 +2,9 @@
 #include "ui_mainwindow.h"
 #include <iostream>
 #include <string>
+#include "about.h"
+#include <QUrl>
+#include <QDesktopServices>
 
 QString memory;
 
@@ -30,4 +33,18 @@ void MainWindow::on_pushButton_clicked()
 }
 
 
+
+
+void MainWindow::on_actionVersion_Info_triggered()
+{
+    About About;
+    About.setModal(true);
+    About.exec();
+}
+
+
+void MainWindow::on_actionGitHub_Page_triggered()
+{
+    QDesktopServices::openUrl(QUrl("https://github.com/alexthelion335/start-mc-serv-gui", QUrl::TolerantMode));
+}
 
